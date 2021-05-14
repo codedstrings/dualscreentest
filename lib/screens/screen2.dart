@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//this is the second screen that appears , uses class videoPlayerScreen
 class VideoPlayerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

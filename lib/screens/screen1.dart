@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:screen_change_test/listitem.dart';
 import 'package:screen_change_test/screens/screen2.dart';
 
+//Thumbnail scroll class
 class ThumbnailScroll extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(backgroundColor: Colors.pink, title: Text("Thumbnails")),
+        appBar: AppBar(backgroundColor: Colors.pink, title: Text("Thumbnails")), //appbar
+
         body: Container(
           child: Padding(
               padding: const EdgeInsets.all(10.0),
@@ -16,7 +18,7 @@ class ThumbnailScroll extends StatelessWidget {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => VideoPlayerScreen(),
+                            builder: (context) => VideoPlayerScreen(),  //route to second screen
                           ),
                         );
                       },
@@ -35,6 +37,8 @@ class ThumbnailScroll extends StatelessWidget {
                               ),
                             ),
                           ))),
+
+                          //code for one card ends here, this card is inside a gesture detector which inturn is a children of listview widget
                   GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(
@@ -58,6 +62,7 @@ class ThumbnailScroll extends StatelessWidget {
                               ),
                             ),
                           ))),
+                          //code for second card ends here
                   GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(
@@ -81,10 +86,13 @@ class ThumbnailScroll extends StatelessWidget {
                               ),
                             ),
                           ))),
-                          listitem('Thumbnail 4'),
+                          //code for third card ends
+
+                          listitem('Thumbnail 4'), // to pass 4th and 5th thumbnail card as a function(not completed yet)
                           listitem('Thumbnail 5'),
                 ],
               )),
         ));
   }
 }
+//class ends
